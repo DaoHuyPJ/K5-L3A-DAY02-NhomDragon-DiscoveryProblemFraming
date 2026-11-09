@@ -27,9 +27,9 @@ Nhóm 2 thành viên, mỗi người pitch top 3 problem cá nhân (tổng cộn
 | 1 | Huy | Khi chuẩn bị nộp bài lab trước hạn 2 tiếng, tôi muốn đối soát file bài làm với rubric chấm điểm, để không bị mất điểm oan do thiếu mục hoặc sai format | Sinh viên nộp bài | Đọc đối chiếu chi tiết từng dòng rubric với nội dung bài nộp (20–25') | "Rubric có tiêu chí định tính (ví dụ 'lập luận chặt') thì đối soát tự động kiểu gì mà không bị hallucinate?" (Long hỏi) |
 | 2 | Huy | Khi gặp lỗi cấu hình môi trường hoặc bug thư viện lạ, tôi muốn tìm nhanh giải pháp từ GitHub Issue/Discord, để sửa lỗi và code tiếp | Sinh viên lập trình | Đọc và sàng lọc 5–10 thread dài hàng chục comment để tìm đúng phiên bản OS/library (25–30') | "Lỗi lạ trên máy cá nhân mỗi người một kiểu, dữ liệu tìm kiếm phân mảnh thì làm sao đảm bảo giải pháp đưa ra chạy được?" (Long hỏi) |
 | 3 | Huy | Khi đến hạn báo cáo tiến độ đồ án mỗi tuần, tôi muốn tổng hợp các commit/PR hoàn thành thành văn bản, để báo cáo mentor đúng hạn | Nhóm trưởng | Tổng hợp narrative (thành tựu, việc chưa xong, blocker) từ git log sơ sài (25–30') | "Nếu commit message viết ẩu kiểu 'fix bug', 'update' thì lấy thông tin đâu ra để viết narrative?" (Long hỏi) |
-| 4 | Long | Khi bắt đầu làm bài lab theo nhóm, tôi muốn chia task và đồng bộ branch git rõ ràng, để các thành viên không code đè lên nhau | Cả nhóm làm lab | Họp bàn phân chia phạm vi và giải quyết merge conflict khi ghép code (30–40') | "Merge conflict là vấn đề về kỷ luật git và giao tiếp nhóm, công nghệ có can thiệp được tận gốc không?" (Huy hỏi) |
-| 5 | Long | Khi ôn tập chuẩn bị thi thực hành cuối kỳ, tôi muốn tổng hợp các dạng bài và lỗi sai hay gặp từ các lab trước, để ôn đúng trọng tâm | Sinh viên ôn thi | Lục lại feedback của giảng viên và commit cũ rải rác ở nhiều repo (45–60') | "Mỗi kỳ giảng viên đổi đề bài, việc tổng hợp lab cũ có mang lại giá trị lặp lại lâu dài không?" (Huy hỏi) |
-| 6 | Long | Khi cần setup môi trường chạy demo đồ án trên máy lạ, tôi muốn có script tự động kiểm tra dependency, để không bị lỗi runtime trước mặt thầy cô | Sinh viên demo | Tự cài tay từng package và sửa lỗi xung đột môi trường Python/Node (30–45') | "Docker hoặc file requirements.txt chuẩn đã giải quyết việc này rồi, có cần bài toán mới không?" (Huy hỏi) |
+| 4 | Long | | | | |
+| 5 | Long | | | | |
+| 6 | Long | | | | |
 
 ### 2.2. Cluster
 
