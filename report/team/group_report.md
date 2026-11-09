@@ -6,7 +6,7 @@
 ## 1. Thông tin nhóm
 
 - Tên nhóm: NhomDragon
-- Thành viên: xem `TEAM.md` (Đào Quang Huy - 2A202603642, Long)
+- Thành viên: Đào Quang Huy - 2A202603642, Hoàng Hải Long - 2A202603670
 - Candidate problem được chọn (1 câu): Đối soát rubric và tài liệu yêu cầu với các file bài nộp lab kỹ thuật để phát hiện thiếu sót và lỗi format trước deadline.
 - Quyết định cuối: Go (Workflow bán thủ công phạm vi hẹp)
 
@@ -128,9 +128,9 @@ Nhóm kết hợp 2 phương pháp kiểm chứng người thật (tuân thủ n
 ##### Interview Snapshot #1
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi | Nam, Sinh viên năm 3 ngành Kỹ thuật Phần mềm (Nhóm 5, lớp L3A) |
-| Câu nói đáng nhớ nhất | *"Tuần trước nhóm mình bị trừ 1.5 điểm lab chỉ vì quên không đổi tên file MSSV_HoTen.md thành MSSV thật. Nội dung viết rất kỹ mà bị trừ điểm kiểu đó ức chế phát khóc!"* |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Tối Chủ nhật tuần trước, nộp bài lúc 23h45. Vì vội nộp cho kịp trước 23h59 nên cả nhóm chỉ kiểm tra xem code chạy được chưa, không ai rà lại từng quy định ngầm trong file SUBMISSION.md. Kết quả bị phạt trừ điểm format. |
+| Người được hỏi | Nam, Sinh viên năm 3 ngành Kỹ thuật Phần mềm  |
+| Câu nói đáng nhớ nhất | *"Tuần trước nhóm mình bị trừ 1.5 điểm lab chỉ vì quên không đổi tên file thành MSSV thật. Nội dung viết rất kỹ mà bị trừ điểm kiểu đó ức chế phát khóc!"* |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Tối thứ 6 tuần trước, nộp bài lúc 23h45. Vì vội nộp cho kịp trước 23h59 nên tôi chỉ kiểm tra xem code chạy được chưa, không  rà lại từng quy định ngầm trong file quy định nộp bài . Kết quả bị phạt trừ điểm format. |
 | Hiện đang xử lý bằng cách nào (workaround)? | Phân công một bạn trong nhóm làm "checker", mở file README/RUBRIC đọc dò từng dòng rồi tick vào sổ tay. |
 | Mất bao lâu, bao lần? | Mất khoảng 40–50 phút mỗi lần nộp lab. Hầu như lab nào cũng phải làm bước này. |
 | Insight / opportunity rút ra | Nhu cầu kiểm tra tự động các lỗi format cứng (file naming, vị trí thư mục, header) là cực kỳ cấp thiết và có thể giải quyết 100% bằng Rule cơ học mà không cần đến AI phức tạp. |
@@ -138,7 +138,7 @@ Nhóm kết hợp 2 phương pháp kiểm chứng người thật (tuân thủ n
 ##### Interview Snapshot #2
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi | Linh, Sinh viên năm 4 ngành Trí tuệ nhân tạo (Nhóm 2, lớp L3B) |
+| Người được hỏi | Linh, Sinh viên năm 4 ngành Trí tuệ nhân tạo |
 | Câu nói đáng nhớ nhất | *"Mình từng thử paste cả bài vào ChatGPT nhờ kiểm tra theo Rubric, nhưng nó toàn bịa ra mấy tiêu chí chung chung kiểu 'bài bạn cần mở rộng thêm về mặt đạo đức' trong khi đề bài không hề yêu cầu!"* |
 | Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Đợt nộp assignment môn Học máy tháng trước. Nhờ ChatGPT đọc đối chiếu, ChatGPT bảo thiếu phân tích rủi ro, Linh mất 30 phút cuống cuồng viết thêm, sau đó đọc lại rubric mới thấy giảng viên ghi rõ 'không bắt buộc'. |
 | Hiện đang xử lý bằng cách nào (workaround)? | Dùng ChatGPT nhưng chỉ dám hỏi từng đoạn ngắn, sau đó vẫn phải tự đối chiếu lại với rubric gốc. |
@@ -378,16 +378,16 @@ Bộ 10 ca kiểm thử kiểm tra chất lượng đầu ra của AI Workflow:
 
 | Test ID | Đầu vào 1: Tiêu chí trong Rubric | Đầu vào 2: Đoạn văn bản trong file bài nộp | Đầu ra mong đợi của AI (Status & Trích dẫn) | Đánh giá |
 |---:|---|---|---|:---:|
-| TC01 | "Mỗi card có số phút cho từng bước và đánh dấu bước nghẽn" | `[1 Export Jira: 10'] -> [2 Viết nháp: 25'] <- BOTTLENECK` | **Đạt** — Trích dẫn: `[2 Viết nháp: 25'] <- BOTTLENECK` (có số phút và đánh dấu) | Đạt |
-| TC02 | "Mỗi card có số phút cho từng bước và đánh dấu bước nghẽn" | `[1 Đọc tài liệu] -> [2 Tổng hợp] -> [3 Viết báo cáo]` | **Nghi ngờ thiếu** — Lý do: Không tìm thấy số phút cho từng bước và chưa đánh dấu bottleneck | Đạt |
-| TC03 | "Không dòng nào có chữ AI, chatbot trong Job Story" | `Khi nộp bài, tôi muốn dùng chatbot AI để rà soát lỗi` | **Không đạt** — Trích dẫn vi phạm: từ khóa `chatbot AI` nằm trong Job Story | Đạt |
-| TC04 | "Không dòng nào có chữ AI, chatbot trong Job Story" | `Khi chuẩn bị nộp bài, tôi muốn biết bài còn thiếu mục nào` | **Đạt** — Trích dẫn: `muốn biết bài còn thiếu mục nào` (không chứa giải pháp trá hình) | Đạt |
-| TC05 | "Success metric có baseline, target và cách đo" | `Nhanh hơn rất nhiều và tiện lợi hơn cho người dùng` | **Nghi ngờ thiếu** — Lý do: Metric định tính, thiếu baseline con số cụ thể và target đo lường | Đạt |
-| TC06 | "Success metric có baseline, target và cách đo" | `Baseline: 60 phút -> Target: < 20 phút; Đo bằng bấm giờ` | **Đạt** — Trích dẫn đầy đủ: baseline 60', target < 20', cách đo bấm giờ | Đạt |
-| TC07 | "Boundary ghi rõ AI không được làm gì" | `Boundary: AI không được tự động sửa nội dung file bài nộp` | **Đạt** — Trích dẫn: `AI không được tự động sửa nội dung file bài nộp` | Đạt |
-| TC08 | "Có phương án quay về khi AI gặp sự cố" | *(File không có đề cập đến Fallback hay phương án dự phòng)* | **Nghi ngờ thiếu** — Lý do: Không tìm thấy nội dung về phương án quay về (fallback) trong Mục 4.2 | Đạt |
-| TC09 | "Kiểm chứng có ít nhất 1 tín hiệu phản bác" | `Người dùng nói: Rất sợ AI báo nhầm làm hoang mang sát deadline` | **Đạt** — Trích dẫn: `Rất sợ AI báo nhầm làm hoang mang sát deadline` (tín hiệu phản bác) | Đạt |
-| TC10 | "Kiểm chứng không hỏi câu bắt đầu bằng: Bạn có muốn..." | `Câu hỏi phỏng vấn: Bạn có muốn một công cụ tự động chấm bài không?` | **Không đạt** — Trích dẫn vi phạm: Câu hỏi giả định vi phạm The Mom Test (`Bạn có muốn...`) | Đạt |
+| TC01 | "Mỗi card có số phút cho từng bước và đánh dấu bước nghẽn" | 1. Mở đề bài và rubric (10 phút) · 2. Đọc đối soát từng dòng (20 phút, bước nghẽn chính) · 3. Nhắc thành viên sửa lại bài (15 phút) | **Đạt** — Trích dẫn: "2. Đọc đối soát từng dòng (20 phút, bước nghẽn chính)" (có đủ số phút và đánh dấu bước nghẽn) | Đạt |
+| TC02 | "Mỗi card có số phút cho từng bước và đánh dấu bước nghẽn" | 1. Đọc tài liệu đề bài · 2. Tổng hợp nội dung báo cáo · 3. Viết bài hoàn thiện nộp lên hệ thống | **Nghi ngờ thiếu** — Lý do: Có liệt kê các bước quy trình nhưng thiếu số phút thực hiện và chưa đánh dấu bước nghẽn | Đạt |
+| TC03 | "Không dòng nào có chữ AI, chatbot trong Job Story" | Khi nộp bài, tôi muốn dùng chatbot AI để rà soát lỗi bài làm | **Không đạt** — Trích dẫn vi phạm: Từ khóa "chatbot AI" nằm trong Job Story (vi phạm nguyên tắc problem-first) | Đạt |
+| TC04 | "Không dòng nào có chữ AI, chatbot trong Job Story" | Khi chuẩn bị nộp bài, tôi muốn biết bài còn thiếu sót những mục nào so với yêu cầu | **Đạt** — Trích dẫn: "muốn biết bài còn thiếu sót những mục nào so với yêu cầu" (mô tả đúng nhu cầu, không chứa giải pháp trá hình) | Đạt |
+| TC05 | "Success metric có baseline, target và cách đo" | Giúp quy trình rà soát bài nộp nhanh hơn rất nhiều và thuận tiện hơn cho sinh viên | **Nghi ngờ thiếu** — Lý do: Metric mang tính định tính, thiếu con số baseline xuất phát điểm và target đo lường cụ thể | Đạt |
+| TC06 | "Success metric có baseline, target và cách đo" | Thời gian đối soát giảm từ baseline 60 phút xuống target dưới 20 phút, đo bằng bấm giờ thực tế | **Đạt** — Trích dẫn: "baseline 60 phút xuống target dưới 20 phút, đo bằng bấm giờ thực tế" (đầy đủ baseline, target và phương pháp đo) | Đạt |
+| TC07 | "Boundary ghi rõ AI không được làm gì" | Ranh giới: AI không được tự động sửa nội dung file bài nộp hay tự ý thực hiện lệnh git commit | **Đạt** — Trích dẫn: "AI không được tự động sửa nội dung file bài nộp hay tự ý thực hiện lệnh git commit" | Đạt |
+| TC08 | "Có phương án quay về khi AI gặp sự cố" | *(File không có đề cập đến Fallback hay phương án dự phòng khi công cụ bị lỗi)* | **Nghi ngờ thiếu** — Lý do: Không tìm thấy nội dung về phương án quay về (fallback) trong Mục 4.2 | Đạt |
+| TC09 | "Kiểm chứng có ít nhất 1 tín hiệu phản bác" | Sinh viên được hỏi phản hồi: Rất sợ công cụ báo nhầm làm hoang mang sửa sai trước hạn nộp | **Đạt** — Trích dẫn: "Rất sợ công cụ báo nhầm làm hoang mang sửa sai trước hạn nộp" (tín hiệu phản bác rõ ràng) | Đạt |
+| TC10 | "Kiểm chứng không hỏi câu bắt đầu bằng: Bạn có muốn..." | Câu hỏi khảo sát: Bạn có muốn một công cụ tự động chấm điểm bài lab không? | **Không đạt** — Trích dẫn vi phạm: Câu hỏi giả định vi phạm nguyên tắc The Mom Test ("Bạn có muốn...") | Đạt |
 
 ---
 
