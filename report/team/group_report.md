@@ -12,7 +12,7 @@
 
 **Bối cảnh / Nhân vật:** Sinh viên ngành Công nghệ thông tin / Nhóm trưởng nhóm lab kỹ thuật tại trường đại học (nhóm Dragon). Mỗi tuần, nhóm phải hoàn thành các bài lab kỹ thuật, làm việc cộng tác qua GitHub, viết các báo cáo định dạng Markdown và chịu trách nhiệm đối soát toàn bộ nội dung với tài liệu Rubric chấm điểm của giảng viên trước deadline.
 
-**Vì sao đây là bài toán tốt:** Actor cụ thể (sinh viên nộp bài / nhóm trưởng); quy trình lặp lại đều đặn mỗi tuần; bottleneck rất rõ ràng ở khâu đọc đối chiếu chi tiết từng tiêu chí (20–25 phút); có baseline thời gian đo thật (60 phút); so sánh được rõ ràng 4 mức No AI / Rule / Workflow / Agent; và quan trọng nhất, **kết quả kiểm chứng cùng research làm nhóm đổi kết luận** (từ định xây AI Agent tự động sửa bài chuyển sang Workflow bán thủ công kết hợp Rule linter).
+**Vì sao đây là bài toán tốt:** Actor cụ thể (sinh viên nộp bài / nhóm trưởng); quy trình lặp lại đều đặn mỗi tuần; bottleneck rất rõ ràng ở khâu đọc đối chiếu chi tiết từng tiêu chí (20–25 phút); có baseline thời gian do nhóm ước tính (~60 phút, chưa bấm giờ thực tế); so sánh được rõ ràng 4 mức No AI / Rule / Workflow / Agent; và quan trọng nhất, **kết quả research cùng phản biện của nhóm làm nhóm đổi kết luận** (từ định xây AI Agent tự động sửa bài chuyển sang Workflow bán thủ công kết hợp Rule linter).
 
 ---
 
@@ -20,25 +20,24 @@
 
 ### 2.1. Pitch
 
-Nhóm 2 thành viên, mỗi người pitch top 3 problem cá nhân (tổng cộng 6 candidate):
+Nhóm 2 thành viên, Huy pitch 3 problem và Long pitch 2 problem (tổng cộng 5 candidate):
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
 | 1 | Huy | Khi chuẩn bị nộp bài lab trước hạn 2 tiếng, tôi muốn đối soát file bài làm với rubric chấm điểm, để không bị mất điểm oan do thiếu mục hoặc sai format | Sinh viên nộp bài | Đọc đối chiếu chi tiết từng dòng rubric với nội dung bài nộp (20–25') | "Rubric có tiêu chí định tính (ví dụ 'lập luận chặt') thì đối soát tự động kiểu gì mà không bị hallucinate?" (Long hỏi) |
 | 2 | Huy | Khi gặp lỗi cấu hình môi trường hoặc bug thư viện lạ, tôi muốn tìm nhanh giải pháp từ GitHub Issue/Discord, để sửa lỗi và code tiếp | Sinh viên lập trình | Đọc và sàng lọc 5–10 thread dài hàng chục comment để tìm đúng phiên bản OS/library (25–30') | "Lỗi lạ trên máy cá nhân mỗi người một kiểu, dữ liệu tìm kiếm phân mảnh thì làm sao đảm bảo giải pháp đưa ra chạy được?" (Long hỏi) |
 | 3 | Huy | Khi đến hạn báo cáo tiến độ đồ án mỗi tuần, tôi muốn tổng hợp các commit/PR hoàn thành thành văn bản, để báo cáo mentor đúng hạn | Nhóm trưởng | Tổng hợp narrative (thành tựu, việc chưa xong, blocker) từ git log sơ sài (25–30') | "Nếu commit message viết ẩu kiểu 'fix bug', 'update' thì lấy thông tin đâu ra để viết narrative?" (Long hỏi) |
-| 4 | Long | | | | |
-| 5 | Long | | | | |
-| 6 | Long | | | | |
+| 4 | Long | Khi cả nhóm cùng code một đồ án trên GitHub và sắp đến hạn demo, tôi muốn chia task rõ ràng theo file/module, để các thành viên không sửa đè lên nhau và không phải gỡ merge conflict phút chót | Nhóm trưởng / thành viên nhóm đồ án | Gỡ merge conflict và ghép code của nhiều người trước giờ demo (~30') | "Merge conflict là vấn đề về kỷ luật git và giao tiếp nhóm, công nghệ có can thiệp được tận gốc không?" (Huy hỏi) |
+| 5 | Long | Khi chuẩn bị demo sản phẩm trên máy khác (máy giảng viên, máy bạn cùng nhóm), tôi muốn cài môi trường chạy được ngay, để demo không bị chết giữa chừng vì thiếu thư viện hoặc sai phiên bản | Sinh viên lập trình / nhóm demo | Chạy thử, đọc lỗi và cài lại thư viện/phiên bản trên máy demo (~30') | "Docker hoặc file requirements.txt chuẩn đã giải quyết việc setup demo rồi, bài toán đó có thực sự cần thiết kế mới không?" (Huy hỏi) |
 
 ### 2.2. Cluster
 
-Gom 6 candidate thành 3 cụm theo bản chất vấn đề:
+Gom 5 candidate thành 3 cụm theo bản chất vấn đề:
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
 | **A: Đảm bảo chất lượng & Tuân thủ quy chuẩn nộp bài** | #1 (Đối soát rubric bài lab) | Nỗi đau đối soát văn bản và tiêu chuẩn trước deadline; dữ liệu đầu vào có sẵn (file markdown bài làm + rubric môn học); tần suất cao (mỗi tuần 1–2 lab); ảnh hưởng trực tiếp đến điểm số |
-| **B: Tìm kiếm tri thức kỹ thuật & Debug lỗi** | #2 (Tìm giải pháp bug thư viện), #5 (Tổng hợp lỗi ôn thi), #6 (Setup môi trường demo) | Nỗi đau tìm kiếm thông tin kỹ thuật phân mảnh; thời gian tiêu tốn lớn nhưng ngữ cảnh đa dạng, khó kiểm soát tính chính xác |
+| **B: Tìm kiếm tri thức kỹ thuật & Debug lỗi** | #2 (Tìm giải pháp bug thư viện), #5 (Setup môi trường demo) | Nỗi đau tìm kiếm thông tin kỹ thuật phân mảnh; thời gian tiêu tốn lớn nhưng ngữ cảnh đa dạng, khó kiểm soát tính chính xác |
 | **C: Quản lý cộng tác nhóm & Báo cáo** | #3 (Tổng hợp báo cáo tuần từ git), #4 (Chia task & tránh conflict) | Nỗi đau giao tiếp và tổng hợp trạng thái làm việc của con người; dữ liệu phụ thuộc nhiều vào thói quen/kỷ luật cá nhân |
 
 ### 2.3. Opportunity Solution Tree rút gọn
@@ -73,7 +72,7 @@ Candidate #1: **Đối soát rubric và tài liệu yêu cầu với các file b
 
 **Vì sao chọn:**
 1. **Điểm cao nhất (35/35)**: Actor rất cụ thể (sinh viên IT/nhóm trưởng), quy trình các bước chuẩn bị nộp bài rõ ràng, dễ vẽ.
-2. **Impact đo lường được trực tiếp**: Giảm thời gian đọc đối soát từ 60 phút xuống < 20 phút; đo được tỷ lệ phát hiện thiếu sót và số lỗi bị trừ điểm.
+2. **Impact đo lường được trực tiếp**: Giảm thời gian đọc đối soát từ ~60 phút xuống < 20 phút (cả hai đều là ước tính của nhóm); đo được tỷ lệ phát hiện thiếu sót và số lỗi bị trừ điểm.
 3. **Phù hợp hoàn hảo để so sánh 4 mức can thiệp**: Có thể thấy ngay ranh giới giữa Rule (kiểm tra định dạng, regex tên file, số cột bảng) vs. Workflow (dùng LLM trích xuất checklist và đối chiếu ngữ nghĩa) vs. Agent (không cần thiết).
 4. **Vừa sức trong 1 buổi lab**: Cả nhóm đều là sinh viên đang trải qua chính nỗi đau này ngay tại buổi lab hôm nay.
 
@@ -108,59 +107,28 @@ Nhóm lập danh sách 5 giả định quan trọng nhất và đánh giá mức
 
 ### 3.2. Kiểm chứng
 
-Nhóm kết hợp 2 phương pháp kiểm chứng người thật (tuân thủ nguyên tắc **The Mom Test** – chỉ hỏi về hành vi và sự việc đã xảy ra, không hỏi giả định tương lai):
-1. **Khảo sát vi mô (Micro Survey)**: Khảo sát nhanh 22 sinh viên công nghệ thông tin/học viên cùng khóa K5.
-2. **Phỏng vấn sâu 3 sinh viên**: Phỏng vấn nhanh bạn học ở các nhóm khác trong lớp.
+Nhóm kiểm chứng với người thật theo nguyên tắc **The Mom Test** (chỉ hỏi về hành vi và sự việc đã xảy ra, không hỏi giả định tương lai). **Hiện tại mới thực hiện được 1 phương pháp: khảo sát nhanh 4 sinh viên.** Nhóm chưa phỏng vấn sâu buổi nào, vì vậy mọi kết luận bên dưới chỉ là tín hiệu ban đầu từ mẫu rất nhỏ (n = 4), chưa đủ để khái quát.
 
-#### A. Kết quả Micro Survey (22 người)
+#### A. Kết quả khảo sát (4 người)
 
-*Khảo sát thực hiện qua Google Forms / Poll nhóm học tập vào sáng 09/11/2026:*
-- **86.4% (19/22 bạn)** xác nhận từng ít nhất 1 lần bị trừ điểm bài lab/assignment vì lý do: sai tên file, thiếu mục trong template hoặc không có số liệu đo lường theo yêu cầu.
-- **Thời gian trung bình**: 77.3% bạn mất từ 30 đến 60 phút chỉ để đọc và rà soát file trước khi nộp bài.
-- **Cách xử lý hiện tại (Workaround)**:
-  - 54.5% (12 bạn): Mở 2 cửa sổ song song (Rubric một bên, file báo cáo một bên) đọc dò bằng mắt.
-  - 31.8% (7 bạn): Copy nội dung bài nộp và rubric paste vào ChatGPT hỏi xem thiếu gì.
-  - 13.7% (3 bạn): Chỉ nộp đại và trông chờ vào may mắn vì quá sát giờ.
-- **Rào cản lớn nhất**: 100% người được hỏi đều lo sợ công cụ AI "báo nhầm" (nói thiếu nhưng thực ra đã viết ở mục khác) khiến họ mất thời gian sửa lại trong hoảng loạn khi deadline chỉ còn tính bằng phút.
+- **4/4 bạn** cho biết từng sai tên file hoặc nộp thiếu yêu cầu so với đề bài/rubric (3 trường hợp sai tên repo/GitHub, 1 trường hợp thiếu file).
+- Chưa thu thập số liệu về thời gian rà soát, cách xử lý hiện tại (workaround) hay mức độ lo ngại AI báo nhầm; các nội dung này chưa được kiểm chứng.
 
-#### B. Phỏng vấn sâu (3 Interview Snapshots theo The Mom Test)
+![Ảnh chụp 4 phản hồi khảo sát (đã che tên)](../assets/cp4-survey-result.png)
 
-##### Interview Snapshot #1
-| Trường | Nội dung |
-|---|---|
-| Người được hỏi | Nam, Sinh viên năm 3 ngành Kỹ thuật Phần mềm  |
-| Câu nói đáng nhớ nhất | *"Tuần trước nhóm mình bị trừ 1.5 điểm lab chỉ vì quên không đổi tên file thành MSSV thật. Nội dung viết rất kỹ mà bị trừ điểm kiểu đó ức chế phát khóc!"* |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Tối thứ 6 tuần trước, nộp bài lúc 23h45. Vì vội nộp cho kịp trước 23h59 nên tôi chỉ kiểm tra xem code chạy được chưa, không  rà lại từng quy định ngầm trong file quy định nộp bài . Kết quả bị phạt trừ điểm format. |
-| Hiện đang xử lý bằng cách nào (workaround)? | Phân công một bạn trong nhóm làm "checker", mở file README/RUBRIC đọc dò từng dòng rồi tick vào sổ tay. |
-| Mất bao lâu, bao lần? | Mất khoảng 40–50 phút mỗi lần nộp lab. Hầu như lab nào cũng phải làm bước này. |
-| Insight / opportunity rút ra | Nhu cầu kiểm tra tự động các lỗi format cứng (file naming, vị trí thư mục, header) là cực kỳ cấp thiết và có thể giải quyết 100% bằng Rule cơ học mà không cần đến AI phức tạp. |
+Ghi chú chi tiết từng phản hồi: [cp4-survey-snapshot.md](../assets/cp4-survey-snapshot.md).
 
-##### Interview Snapshot #2
-| Trường | Nội dung |
-|---|---|
-| Người được hỏi | Linh, Sinh viên năm 4 ngành Trí tuệ nhân tạo |
-| Câu nói đáng nhớ nhất | *"Mình từng thử paste cả bài vào ChatGPT nhờ kiểm tra theo Rubric, nhưng nó toàn bịa ra mấy tiêu chí chung chung kiểu 'bài bạn cần mở rộng thêm về mặt đạo đức' trong khi đề bài không hề yêu cầu!"* |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Đợt nộp assignment môn Học máy tháng trước. Nhờ ChatGPT đọc đối chiếu, ChatGPT bảo thiếu phân tích rủi ro, Linh mất 30 phút cuống cuồng viết thêm, sau đó đọc lại rubric mới thấy giảng viên ghi rõ 'không bắt buộc'. |
-| Hiện đang xử lý bằng cách nào (workaround)? | Dùng ChatGPT nhưng chỉ dám hỏi từng đoạn ngắn, sau đó vẫn phải tự đối chiếu lại với rubric gốc. |
-| Mất bao lâu, bao lần? | Mất khoảng 60 phút mỗi lần nộp. |
-| Insight / opportunity rút ra | AI rất dễ bị "bịa đặt" (hallucination) nếu để nó phán xét tự do. Giải pháp bắt buộc phải trích xuất chính xác tiêu chí từ Rubric thành danh sách kiểm tra (checklist) và chỉ trích dẫn vị trí văn bản trong bài làm để người dùng tự xác nhận. |
+#### B. Phỏng vấn sâu
 
-##### Interview Snapshot #3
-| Trường | Nội dung |
-|---|---|
-| Người được hỏi | Tuấn, Nhóm trưởng nhóm làm Capstone Project (5 thành viên) |
-| Câu nói đáng nhớ nhất | *"Nhóm đông người, mỗi ông viết một file markdown theo style riêng. Đến lúc gộp lại để nộp thì chỗ viết tắt, chỗ thiếu bảng số liệu, đọc dò từng file mất cả buổi tối."* |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Milestone 2 cách đây 2 tuần, deadline lúc 12h trưa. Tuấn phải thức từ 8h sáng mở 6 file báo cáo cá nhân của thành viên để kiểm tra xem các bạn đã điền đủ bảng và con số minh chứng chưa. |
-| Hiện đang xử lý bằng cách nào (workaround)? | Tạo Google Docs chung hoặc template mẫu bắt buộc, nhưng các bạn vẫn hay quên điền số liệu. |
-| Mất bao lâu, bao lần? | Mất 2–3 tiếng mỗi mốc nộp bài lớn. |
-| Insight / opportunity rút ra | Cần cơ chế phát hiện nhanh các ô/bảng còn trống hoặc các câu văn chung chung thiếu con số đo lường (như "tăng nhiều", "rất tốt"). |
+Chưa thực hiện. Nhóm sẽ bổ sung ở lần kiểm chứng tiếp theo (xem mục 9).
 
 #### C. Tổng hợp tín hiệu xác nhận & phản bác
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| Micro Survey | 22 sinh viên | 86.4% từng mất điểm oan vì lỗi format/thiếu mục; mất trung bình 45–60' rà soát | Người dùng không muốn giao toàn quyền cho AI; cực kỳ sợ lỗi báo nhầm (false positive) gây hoảng loạn |
-| Phỏng vấn sâu | 3 sinh viên | Đều xác nhận khâu đọc dò rubric là bottleneck gây mệt mỏi nhất trước deadline | Cảnh báo AI hay bị ảo giác, thêm thắt các tiêu chí ngoài đề bài; không chấp nhận AI tự ý sửa trực tiếp file bài làm |
+| Khảo sát nhanh | 4 sinh viên | 4/4 từng sai tên file hoặc nộp thiếu yêu cầu | Chưa ghi nhận được tín hiệu phản bác nào (mẫu quá nhỏ, chưa hỏi về nỗi lo AI báo nhầm) |
+
+> **Giả định chưa kiểm chứng:** việc sinh viên sợ AI báo nhầm trước deadline và không muốn AI tự sửa bài là giả định của nhóm (rút ra từ phản biện và research), chưa có số liệu khảo sát chứng minh.
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
 1. **Thu hẹp phạm vi can thiệp (Boundary)**: Từ ý định ban đầu là "công cụ đánh giá toàn diện bài nộp", nhóm **chuyển thành "Quy trình hỗ trợ đối soát 2 tầng"**:
@@ -172,7 +140,7 @@ Nhóm kết hợp 2 phương pháp kiểm chứng người thật (tuân thủ n
 
 ### 3.3. Research giải pháp đã có
 
-Nhóm đã tìm kiếm và kiểm tra trực tiếp 3 giải pháp/công cụ tương tự trên thị trường:
+Nhóm đã tìm kiếm và kiểm tra trực tiếp 3 giải pháp/công cụ tương tự trên thị trường (ghi chú chi tiết: [cp4-research-notes.md](../assets/cp4-research-notes.md)):
 
 | Công cụ / case / pattern | Link đã kiểm chứng | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
@@ -186,10 +154,14 @@ Nhóm đã tìm kiếm và kiểm tra trực tiếp 3 giải pháp/công cụ t�
 
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ quy trình hiện tại (Thủ công — 60 phút):
+> **Lưu ý:** Toàn bộ số phút trong mục 4 là **ước tính của nhóm**, chưa bấm giờ thực tế.
+
+Sơ đồ quy trình hiện tại (Thủ công — ~60 phút ước tính):
+
+![Quy trình hiện tại](../assets/cp5-workflow-current.png)
 
 ```text
-HIỆN TẠI — Tổng thời gian: 60 phút
+HIỆN TẠI — Tổng thời gian: ~60 phút (ước tính)
 
 [Bước 1: Mở Rubric.md & Checkpoints.md đọc tiêu chí] (10')
        ↓
@@ -204,7 +176,7 @@ HIỆN TẠI — Tổng thời gian: 60 phút
 
 Bảng mô tả chi tiết từng bước:
 
-| Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
+| Bước | Actor | Input | Output | Thời gian (ước tính) / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
 | 1 | Nhóm trưởng / Người nộp | File `RUBRIC.md`, `CHECKPOINTS.md`, `SUBMISSION.md` | Danh sách các yêu cầu trong đầu hoặc ghi tạm ra giấy | 10 phút / Mỗi lần nộp lab (1–2 lần/tuần) | Các tài liệu quy định nằm rải rác ở nhiều file khác nhau |
 | 2 | Nhóm trưởng | Cấu trúc thư mục repo, các file báo cáo markdown | Danh sách các file hiện có trong repo | 15 phút / Mỗi lần nộp lab | Phải mở từng file xem tên file đã đúng quy tắc chưa, các heading có đủ không |
@@ -219,10 +191,12 @@ Bước 3 (Đọc đối chiếu chi tiết): Mất từ 20 đến 25 phút. Đ�
 
 ### 4.2. Quy trình tương lai
 
+> **Lưu ý:** Số phút của từng bước bên dưới là ước tính của nhóm, sẽ đo thật khi chạy pilot.
+
 Quy trình tương lai kết hợp **Rule-based Linter (Tầng 1)**, **Workflow LLM hỗ trợ trích xuất (Tầng 2)** và **Con người duyệt (Human-in-the-loop)**:
 
 ```text
-TƯƠNG LAI — Tổng thời gian: 17 phút (Bán thủ công)
+TƯƠNG LAI — Tổng thời gian: ~17 phút (Bán thủ công, ước tính)
 
 [Bước 1: Chạy Rule Linter tự động kiểm tra format cứng] (30 giây) ───▶ [RULE]
        ↓ (Nếu đạt cấu trúc)
@@ -232,6 +206,8 @@ TƯƠNG LAI — Tổng thời gian: 17 phút (Bán thủ công)
        ↓
 [Bước 4: Chạy linter kiểm tra lại lần cuối & Push bài nộp] (5 phút) ───▶ [HUMAN]
 ```
+
+![Quy trình tương lai](../assets/cp5-workflow-future.png)
 
 **Phân định mức độ can thiệp:**
 - **Bước 1 [RULE]**: Script kiểm tra cơ học 100% bằng Rule (kiểm tra regex tên file `MSSV_HoTen.md`, sự tồn tại của các file bắt buộc, số cột bảng, link markdown hợp lệ). Thời gian: 30 giây.
@@ -257,10 +233,10 @@ TƯƠNG LAI — Tổng thời gian: 17 phút (Bán thủ công)
 
 ### 4.3. Before / after
 
-| Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
+| Chỉ số | Trước (ước tính) | Sau (kỳ vọng, ước tính) | Ghi chú |
 |---|---:|---:|---|
 | **Số bước** | 5 bước | 4 bước | Gộp việc đọc dò và đối chiếu thành 1 bước duyệt bảng tự động |
-| **Tổng thời gian** | 60 phút | **17 phút** | **Giảm 71.6% thời gian** (tiết kiệm ~43 phút mỗi lần nộp) |
+| **Tổng thời gian** | ~60 phút | **~17 phút** | **Giảm khoảng 71.6%** (tiết kiệm ~43 phút mỗi lần nộp) — số liệu do nhóm ước tính, chưa đo thật |
 | **Số bước thủ công** | 5 / 5 bước (100%) | 2 bước thủ công | Máy làm 2 bước (Rule + AI), người chỉ duyệt và sửa |
 | **Bottleneck chính** | Đọc dò bằng mắt từng dòng (20–25') | Sinh viên chỉ đọc các mục "Nghi ngờ thiếu" (10') | Giảm 60% thời gian nghẽn, loại bỏ mỏi mắt |
 | **Rủi ro mới phát sinh** | Mệt mỏi, áp lực dẫn đến bỏ sót quy định ngầm | Nguy cơ AI báo nhầm (False Positive) làm sinh viên hoang mang | Đã kiểm soát bằng ranh giới: AI chỉ trích dẫn văn bản, người tự đọc xác nhận |
@@ -274,13 +250,13 @@ TƯƠNG LAI — Tổng thời gian: 17 phút (Bán thủ công)
 | **Actor** | Sinh viên ngành Công nghệ thông tin / Nhóm trưởng chịu trách nhiệm nộp bài lab kỹ thuật trên GitHub/LMS |
 | **Quy trình** | Quy trình rà soát, kiểm tra sự đầy đủ và tính tuân thủ quy cách của các file bài nộp markdown theo tài liệu Rubric và Checkpoints trước deadline 2 tiếng |
 | **Bottleneck** | Bước đọc đối chiếu chi tiết từng tiêu chí định tính và định lượng trong Rubric với từng đoạn nội dung trong các file markdown bài làm (mất 20–25 phút, rất dễ sót do hoa mắt và áp lực cận deadline) |
-| **Impact** | Tiêu tốn 45–60 phút mỗi lần nộp lab; 86.4% sinh viên từng bị trừ từ 1–2 điểm oan do lỗi cấu trúc file hoặc thiếu mục nhỏ; gây căng thẳng, hoang mang trong nhóm trước giờ G |
-| **Success Metric** | • **Baseline**: Mất 60 phút rà soát thủ công; tỷ lệ phát hiện thiếu sót chỉ đạt ~60% (vẫn sót lỗi format); 2/4 lab gần nhất bị trừ điểm.<br>• **Target**: Tổng thời gian rà soát giảm xuống < 20 phút (giảm > 65%); Tỷ lệ phát hiện đúng các tiêu chí thiếu sót đạt $\ge 90\%$; 0 bài nộp bị trừ điểm cấu trúc/format.<br>• **Cách đo**: Bấm giờ đồng hồ từ lúc bắt đầu rà soát đến khi hoàn tất commit; đếm số lỗi thiếu sót được phát hiện so với bảng điểm phúc tra thực tế của giảng viên |
+| **Impact** | Tiêu tốn khoảng 45–60 phút mỗi lần nộp lab (nhóm ước tính); 4/4 sinh viên được khảo sát từng sai tên file hoặc nộp thiếu yêu cầu; gây căng thẳng, hoang mang trong nhóm trước giờ G |
+| **Success Metric** | • **Baseline** (nhóm ước tính, chưa đo thật): ~60 phút rà soát thủ công; tỷ lệ phát hiện thiếu sót và số lần bị trừ điểm chưa được đo, sẽ đo khi chạy pilot.<br>• **Target**: Tổng thời gian rà soát giảm xuống < 20 phút (giảm > 65%); Tỷ lệ phát hiện đúng các tiêu chí thiếu sót đạt $\ge 90\%$; 0 bài nộp bị trừ điểm cấu trúc/format.<br>• **Cách đo**: Bấm giờ đồng hồ từ lúc bắt đầu rà soát đến khi hoàn tất commit; đếm số lỗi thiếu sót được phát hiện so với bảng điểm phúc tra thực tế của giảng viên |
 | **Boundary** | • AI không được tự động sửa nội dung file báo cáo markdown.<br>• AI không được tự ý commit hoặc nộp bài lên LMS thay sinh viên.<br>• AI không tự phán xét kiến thức; chỉ trích xuất đối chiếu và highlight vị trí văn bản.<br>• **HITL**: Bắt buộc sinh viên phải tự duyệt các mục cảnh báo và tự tay sửa bài làm |
 
 **Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:**
 - **Phản biện nhận được**: *"Success metric '0 bài nộp bị trừ điểm cấu trúc' là mong muốn kết quả gián tiếp, phụ thuộc vào việc sinh viên sau khi thấy cảnh báo có chịu sửa hay không, chứ công cụ đối soát không trực tiếp quyết định việc sinh viên có sửa bài không."*
-- **Nhóm có đồng ý không**: **Đồng ý hoàn toàn**. Nhóm đã bổ sung thêm success metric đo lường trực tiếp năng lực của công cụ: *"Tỷ lệ phát hiện đúng các tiêu chí thiếu sót đạt $\ge 90\%$"* và *"Thời gian rà soát giảm từ 60' xuống < 20'"*.
+- **Nhóm có đồng ý không**: **Đồng ý hoàn toàn**. Nhóm đã bổ sung thêm success metric đo lường trực tiếp năng lực của công cụ: *"Tỷ lệ phát hiện đúng các tiêu chí thiếu sót đạt $\ge 90\%$"* và *"Thời gian rà soát giảm từ ~60' xuống < 20' (ước tính của nhóm)"*.
 
 ---
 
@@ -329,7 +305,7 @@ Bài của nhóm nằm ở ô: **Độ mơ hồ Trung bình × Độ phức tạ
 
 - **Người dùng muốn được hỗ trợ (augment) hay giao hẳn việc (automate)?**
   - **Người dùng muốn được hỗ trợ (AUGMENT)**.
-  - *Bằng chứng*: Kết quả khảo sát 22 sinh viên và 3 buổi phỏng vấn sâu cho thấy 100% sinh viên từ chối việc để AI tự động sửa file bài nộp hay tự nộp bài. Điểm số là trách nhiệm cá nhân, sinh viên chỉ muốn một "trợ lý soi lỗi" chỉ điểm các chỗ nghi ngờ để họ tự quyết định sửa.
+  - *Bằng chứng*: Đây là giả định của nhóm, chưa được khảo sát xác nhận (mới khảo sát 4 sinh viên về việc sai tên file/thiếu yêu cầu, chưa hỏi về việc giao AI tự sửa bài). Điểm số là trách nhiệm cá nhân, nên nhóm chọn hướng "trợ lý soi lỗi" chỉ điểm các chỗ nghi ngờ để sinh viên tự quyết định sửa; cần kiểm chứng thêm.
 - **AI sai kiểu nào tệ hơn, báo nhầm hay bỏ sót?**
   - **Báo nhầm (False Positive) tệ hơn rất nhiều**.
   - *Vì sao*: Sát deadline 20–30 phút, nếu AI báo nhầm rằng bài đang thiếu một phần quan trọng (trong khi sinh viên đã viết ở mục khác), sinh viên sẽ rơi vào trạng thái hoảng loạn, vội vàng viết thêm những nội dung thừa thãi hoặc làm hỏng cấu trúc bài làm.
@@ -344,8 +320,8 @@ Bài của nhóm nằm ở ô: **Độ mơ hồ Trung bình × Độ phức tạ
 | **Actor** | Sinh viên ngành Công nghệ thông tin / Nhóm trưởng chịu trách nhiệm nộp bài lab kỹ thuật trên GitHub/LMS |
 | **Quy trình** | Quy trình rà soát, kiểm tra sự đầy đủ và tính tuân thủ quy cách của các file bài nộp markdown theo tài liệu Rubric và Checkpoints trước deadline 2 tiếng |
 | **Bottleneck** | Bước đọc đối chiếu chi tiết từng tiêu chí định tính và định lượng trong Rubric với từng đoạn nội dung trong các file markdown bài làm (mất 20–25 phút, rất dễ sót do hoa mắt và áp lực cận deadline) |
-| **Impact** | Tiêu tốn 45–60 phút mỗi lần nộp lab; 86.4% sinh viên từng bị trừ từ 1–2 điểm oan do lỗi cấu trúc file hoặc thiếu mục nhỏ; gây căng thẳng, hoang mang trong nhóm trước giờ G |
-| **Success Metric** | • **Baseline**: Mất 60 phút rà soát thủ công; tỷ lệ phát hiện thiếu sót chỉ đạt ~60% (vẫn sót lỗi format); 2/4 lab gần nhất bị trừ điểm.<br>• **Target**: Tổng thời gian rà soát giảm xuống < 20 phút (giảm > 65%); Tỷ lệ phát hiện đúng các tiêu chí thiếu sót đạt $\ge 90\%$; Tỷ lệ báo nhầm (False Positive) $\le 10\%$; 0 bài nộp bị trừ điểm cấu trúc/format.<br>• **Cách đo**: Bấm giờ đồng hồ từ lúc chạy linter đến khi commit; đếm số lỗi phát hiện đúng so với bảng điểm của giảng viên |
+| **Impact** | Tiêu tốn khoảng 45–60 phút mỗi lần nộp lab (nhóm ước tính); 4/4 sinh viên được khảo sát từng sai tên file hoặc nộp thiếu yêu cầu; gây căng thẳng, hoang mang trong nhóm trước giờ G |
+| **Success Metric** | • **Baseline** (nhóm ước tính, chưa đo thật): ~60 phút rà soát thủ công; tỷ lệ phát hiện thiếu sót và số lần bị trừ điểm chưa được đo, sẽ đo khi chạy pilot.<br>• **Target**: Tổng thời gian rà soát giảm xuống < 20 phút (giảm > 65%); Tỷ lệ phát hiện đúng các tiêu chí thiếu sót đạt $\ge 90\%$; Tỷ lệ báo nhầm (False Positive) $\le 10\%$; 0 bài nộp bị trừ điểm cấu trúc/format.<br>• **Cách đo**: Bấm giờ đồng hồ từ lúc chạy linter đến khi commit; đếm số lỗi phát hiện đúng so với bảng điểm của giảng viên |
 | **Boundary** | • AI **không** được tự động sửa nội dung file báo cáo markdown.<br>• AI **không** được tự ý commit hoặc nộp bài lên LMS thay sinh viên.<br>• AI **không** tự phán xét đúng/sai tuyệt đối; bắt buộc phải trích dẫn đoạn văn bản tương ứng (citation).<br>• **HITL**: Bắt buộc sinh viên phải tự duyệt các mục cảnh báo và tự tay sửa bài làm |
 | **AI intervention point** | Chen vào giữa Bước 2 và Bước 3: Sau khi Rule quét xong format cơ học, AI nhận đầu vào là Rubric + file Markdown, tự động trích xuất bảng ma trận đối chiếu 3 cột (Tiêu chí - Trích dẫn bài làm - Trạng thái) |
 | **Mức chọn** | **Workflow bán thủ công (Human-in-the-loop)** |
@@ -355,7 +331,7 @@ Bài của nhóm nằm ở ô: **Độ mơ hồ Trung bình × Độ phức tạ
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| **Success Metric** | Chỉ đo thời gian (< 20') và tỷ lệ phát hiện thiếu sót | Bổ sung thêm chỉ số an toàn: **Tỷ lệ báo nhầm (False Positive) $\le 10\%$** | Sau kiểm chứng người dùng ở CP4, nhận thấy rủi ro báo nhầm là nỗi sợ lớn nhất của sinh viên trước deadline |
+| **Success Metric** | Chỉ đo thời gian (< 20') và tỷ lệ phát hiện thiếu sót | Bổ sung thêm chỉ số an toàn: **Tỷ lệ báo nhầm (False Positive) $\le 10\%$** | Qua phản biện và research ở CP4, nhóm cho rằng rủi ro báo nhầm là nỗi lo lớn trước deadline (giả định, chưa khảo sát xác nhận) |
 | **AI intervention point** | Chưa xác định cụ thể điểm chèn trong quy trình | Xác định chính xác: Chen sau tầng Rule Linter và trước bước sinh viên duyệt bài | Đảm bảo nguyên tắc phân tầng: việc dễ/cơ học để Rule làm, AI chỉ làm khâu trích xuất đối chiếu ngữ nghĩa |
 | **Rủi ro & người kiểm tra** | Chưa có trường này | Bổ sung rủi ro báo nhầm và xác định rõ Nhóm trưởng là người kiểm tra (HITL) | Đảm bảo tính chịu trách nhiệm và ranh giới an toàn theo chuẩn Google PAIR |
 
@@ -397,7 +373,7 @@ Bộ 10 ca kiểm thử kiểm tra chất lượng đầu ra của AI Workflow:
 
 | Rủi ro | Câu hỏi cốt lõi | Mức độ rủi ro | Lý do & Bằng chứng thực tế |
 |---|---|:---:|---|
-| **Value (Giá trị)** | Người dùng có thật sự cần và sẽ dùng không? | **Thấp (An toàn)** | 86.4% sinh viên trong khảo sát xác nhận từng bị trừ điểm format và đều mất 45–60' rà soát thủ công. Nhu cầu tiết kiệm thời gian và tránh mất điểm oan là nỗi đau có thật 100%. |
+| **Value (Giá trị)** | Người dùng có thật sự cần và sẽ dùng không? | **Thấp (An toàn)** | Khảo sát nhanh 4 sinh viên: 4/4 từng sai tên file hoặc nộp thiếu yêu cầu. Thời gian rà soát 45–60' là ước tính của nhóm. Mẫu còn rất nhỏ nên cần kiểm chứng thêm trước khi mở rộng. |
 | **Usability (Khả dụng)** | Người dùng có dùng được, hiểu và sửa được đầu ra không? | **Thấp (An toàn)** | Giao diện đầu ra là bảng Markdown 3 cột quen thuộc; AI không can thiệp sâu mà chỉ highlight trích dẫn, sinh viên hoàn toàn làm chủ việc đọc và chỉnh sửa file bài làm. |
 | **Feasibility (Khả thi kỹ thuật)** | Có đủ công cụ, dữ liệu và năng lực để triển khai không? | **Thấp (An toàn)** | Dữ liệu đầu vào (Markdown/Rubric) có cấu trúc văn bản sạch; các mô hình LLM hiện nay (Gemini 1.5/GPT-4o) thực hiện tác vụ trích xuất và so khớp văn bản đạt độ chính xác > 95%. |
 | **Viability (Khả thi vận hành/tổ chức)** | Có phù hợp chi phí, quy chế học thuật của nhà trường không? | **Thấp (An toàn)** | Công cụ chỉ đóng vai trò "Spell-check / Linter" trước khi nộp, không viết hộ bài, không vi phạm quy chế liêm chính học thuật. Chi phí token cho mỗi lần quét bài rất nhỏ (~$0.01/lần). |
@@ -408,7 +384,7 @@ Bộ 10 ca kiểm thử kiểm tra chất lượng đầu ra của AI Workflow:
 
 **Lý do:**
 1. Cả 4 rủi ro đều ở mức **Thấp (An toàn)**.
-2. Bài toán có giá trị thực tế cao, quy trình rõ ràng và giải quyết trực tiếp bước nghẽn tốn thời gian nhất (tiết kiệm 71.6% thời gian).
+2. Bài toán có giá trị thực tế cao, quy trình rõ ràng và giải quyết trực tiếp bước nghẽn tốn thời gian nhất (tiết kiệm khoảng 71.6% thời gian theo ước tính của nhóm).
 3. Thiết kế phân tầng thông minh: Rule xử lý 100% lỗi format cứng, AI chỉ làm nhiệm vụ trích xuất đối chiếu và giữ vững nguyên tắc con người duyệt (HITL), triệt tiêu rủi ro vi phạm đạo đức học thuật.
 
 **Pilot nhỏ nhất (MVP / Proof-of-Concept):**
@@ -427,10 +403,12 @@ Bộ 10 ca kiểm thử kiểm tra chất lượng đầu ra của AI Workflow:
 ### Hạn chế hiện tại:
 1. Đối với các rubric dùng từ ngữ quá trừu tượng (như "suy nghĩ đột phá", "ý tưởng độc đáo"), AI có thể gặp khó khăn trong việc gắn nhãn chính xác và sẽ phải chuyển sang trạng thái "Cần người xem lại".
 2. Phụ thuộc vào chất lượng format ban đầu của sinh viên: nếu sinh viên viết markdown không chuẩn heading, việc trích xuất số dòng có thể bị lệch.
+3. **Số liệu kiểm chứng còn rất ít:** mới có khảo sát nhanh 4 sinh viên (4/4 từng sai tên file hoặc nộp thiếu yêu cầu), chưa phỏng vấn sâu; mọi thời gian quy trình (hiện tại ~60', tương lai ~17') đều là ước tính của nhóm, chưa bấm giờ thực tế.
 
 ### Hướng phát triển tiếp theo:
 1. Đóng gói quy trình thành một **GitHub Action tự động** (tương tự linter), tự động tạo bảng đối soát trong phần Pull Request comment mỗi khi sinh viên tạo PR.
 2. Mở rộng bộ quy tắc Rule-based cho các định dạng bài nộp khác ngoài Markdown (ví dụ: Jupyter Notebook `.ipynb`, file PDF báo cáo).
+3. Mở rộng khảo sát (hỏi thêm về thời gian rà soát và nỗi lo AI báo nhầm), làm phỏng vấn sâu và bấm giờ quy trình thật trước khi kết luận số liệu.
 
 ---
 

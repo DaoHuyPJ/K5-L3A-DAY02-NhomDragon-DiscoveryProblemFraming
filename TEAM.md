@@ -13,7 +13,7 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | Đào Quang Huy | 2A202603642 | Nhóm trưởng, điều phối, phụ trách OST, Research, Problem Statement v0/v1 | DaoHuyPJ |
-| 2 | Long | [Điền MSSV của Long] | Thành viên, phản biện, phụ trách Kiểm chứng (phỏng vấn/survey), Quy trình Trước/Sau, Quyết định | [Điền GitHub của Long] |
+| 2 | Hoàng Hải Long | 2A202603670 | Thành viên, phản biện, phụ trách Kiểm chứng (phỏng vấn/survey), Quy trình Trước/Sau, Quyết định | hwangron |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
@@ -46,7 +46,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
 - Đóng góp 3 Problem Card cá nhân ở CP2, pitch Card #1 (Đối soát rubric bài lab) được nhóm chọn làm Candidate Problem.
-- Tổng hợp bảng pitch của 2 thành viên (6 candidate), gom thành 3 cluster và vẽ cây Opportunity Solution Tree (OST) chuẩn outcome.
+- Tổng hợp bảng pitch của 2 thành viên (5 candidate), gom thành 3 cluster và vẽ cây Opportunity Solution Tree (OST) chuẩn outcome.
 - Tìm kiếm và kiểm tra 3 giải pháp/công cụ thực tế đã có (Turnitin rubric checker, Grammarly rubric reviewer, GitHub Action markdown linter).
 - Viết Problem Statement v0 và nâng cấp lên Problem Statement v1 với đầy đủ 6 trường + AI intervention point + ranh giới boundary (HITL).
 
@@ -59,7 +59,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - Nhận ra sự khác biệt sâu sắc giữa "Opportunity" (nhu cầu/nỗi đau thực sự của người dùng) và "Solution trá hình" (tính năng/công cụ công nghệ). Khi thảo luận cây OST, nhóm đã loại bỏ được tư duy vội vàng muốn làm AI Agent tự code/sửa bài nộp.
 
-### HoVaTen_Long-MSSV
+### HoangHaiLong-2A202603670
 
 **Phần việc phụ trách:**
 
@@ -68,13 +68,17 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- [Long điền chi tiết đóng góp của mình sau khi làm bài]
+- CP3: phản biện 3 card của Huy, nêu băn khoăn về tiêu chí định tính của rubric.
+- CP4: khảo sát 4 người. 
+- CP5: vẽ quy trình trước/sau và bảng before/after.
+- CP6: chấm 4 rủi ro, quyết định Go, đặt ngưỡng dừng.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
 - `report/team/group_report.md`: mục 2.1, 3.2, 4, 8.
+- `report/assets/`: `cp4-survey-result.png`, `cp4-survey-snapshot.md`, `cp4-research-notes.md`, `cp5-workflow-current.png`, `cp5-workflow-future.png`.
+- File báo cáo cá nhân: `report/individual/2A202603670_HoangHaiLong.md`.
 
 **Điều mình học được từ phần nhóm:**
 
-- [Long điền cảm nhận của mình]
-
+- Lỗi format chỉ cần Rule; AI chỉ làm phần ngữ nghĩa và phải có người duyệt.
