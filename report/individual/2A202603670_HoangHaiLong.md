@@ -184,7 +184,7 @@ Có. Theo ghi chép của Huy, lúc đầu nhóm nghĩ ngay tới một "AI Agen
 Huy có hỏi về vấn đề merge conflict và tôi đề xuất thực hiện theo quy ước nhóm, ai làm phần nào và Huy cũng thống nhất với ý kiến của tôi. 
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
-Theo báo cáo nhóm của tôi, 22 người được hỏi sợ nhất là AI "báo nhầm" sát giờ nộp, gây hoang mang.  
+Theo báo cáo nhóm của tôi, 22 người được hỏi điểu mọi người sợ nhất là AI "báo nhầm" sát giờ nộp, gây hoang mang.  
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 Khó nhất là viết Success Metric có đủ baseline, target và cách đo. Ban đầu nhóm ghi "không bị trừ điểm", nhưng đó là kết quả gián tiếp, phụ thuộc người chấm và việc sinh viên có chịu sửa hay không.
