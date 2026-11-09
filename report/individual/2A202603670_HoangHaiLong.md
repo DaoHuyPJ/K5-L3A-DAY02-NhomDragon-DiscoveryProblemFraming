@@ -166,7 +166,7 @@ HIỆN TẠI — ~160 phút/buổi
 | CP5 Quy trình | Nhờ AI tóm tắt quy trình trước/sau của nhóm | Tóm gọn 5 bước còn 4 bước, nêu rõ bước Rule, AI và người duyệt | AI gợi ý tự động | Có xác nhận cuối của người dùng  |
 | CP5–6 Problem Statement | Nhờ AI giải thích persona, problem statement, triệu chứng và gốc rễ của dự án Huy đề xuất | Tách được triệu chứng với gốc rễ và chỉ ra phần lớn lỗi format chỉ cần Rule | Phần gốc rễ là AI tự suy ra từ tài liệu, không phải nhóm đã viết trong báo cáo | Đúng với bài làm của nhóm |
 | CP6 Mức can thiệp / quyết định | Nhờ AI tóm tắt mức can thiệp và quyết định Go của nhóm | Tóm đúng lý do loại No AI, Rule thuần và Agent, cùng ngưỡng dừng | AI chỉ chép lại kết luận của nhóm, không tự kiểm lại việc chấm cả 4 rủi ro đều "Thấp" có quá lạc quan không | *(bạn tự điền)* |
-| CP7 Reflection (bản nháp) | Nhờ AI viết bản nháp mục 6.1–6.7 dựa trên tài liệu nhóm | Có sẵn khung 6 câu trả lời và chuỗi giải thích bài nhóm | Bản nháp dựa vào tài liệu, không phải trải nghiệm thật của tôi; các chỗ đánh dấu là chỗ AI không biết tôi đã làm gì | Có sửa lại theo ý cá nhân |
+| CP7 Reflection | Nhờ AI giải thích mục 6.1–6.7 dựa trên tài liệu nhóm | Có sẵn khung 6 câu trả lời và chuỗi giải thích bài nhóm | AI trả lời quá dài dòng và có phần khó  | Có sửa lại theo ý cá nhân |
 
 ---
 
